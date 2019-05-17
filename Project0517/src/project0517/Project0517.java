@@ -24,6 +24,11 @@ public class Project0517 {
         for (Person person : people) {
             System.out.println(person.getFullName());
         }
+        List<Person> peopleInChicago = Filter.cityFilter("Chicago", people);
+        for (Person person : peopleInChicago) {
+            System.out.println(person.getEmail());
+        }
+        
     }
     
 }
