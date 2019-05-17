@@ -6,6 +6,7 @@
 package project0517;
 
 import java.util.List;
+import java.util.Scanner;
 
 /**
  *
@@ -29,6 +30,22 @@ public class Project0517 {
             System.out.println(person.getEmail());
         }
         
+    }
+    
+    public static void showPeopleInCity(List<Person> people) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Adj meg egy városnevet:");
+        String city = sc.nextLine();
+        boolean found = false;
+        for (Person person : people) {
+            if (person.getCity().equalsIgnoreCase(city)) {
+                System.out.println(person.getFullName());
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Ebben a városban lakó emberről nincs adatunk.");
+        }
     }
     
 }
